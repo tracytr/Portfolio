@@ -1,69 +1,40 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <title>My Portfolio</title>
-  </head>
   
-  <style>
+<style>
 * {box-sizing: border-box;}
 	 
-/* Characteristics of the body */
-body {
-  margin: 0;
-  font-family: candara;
-}
+/* Body Characteristics */
+body {font-family: candara;}
 
-/* Style the header */
+/* Header Characteristics */
 .header {
-  padding: 35px;
-  text-align: center;
-  border-bottom: solid;
-  border-width: 1px;
-}
+    padding: 35px;
+    text-align: center;
+    border-bottom: solid;
+    border-width: 1px;}
 
-/* Creates equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 20px;
-}
-
-/* Responsive layout - makes the columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
-  }
-}
-
-/* Characteristics of the images */
+/* Image Characteristics */
 div.gallery img {
-  width: 100%;
-  height: auto;
-  margin: 10px 0;
-  padding: 0 10px;
-}
-
-/* Characteristics of the responsive function */
-.responsive {
-  float: left;
-  width: 50%;
-}
-
-/* Responsive layout - makes the images stack on top of the text */
-@media only screen and (max-width: 700px) {
-  .responsive {
     width: 100%;
-  }
-}
+    height: auto;
+    margin: 10px 0;
+    padding: 0 10px;}
 
-/* Container for image and overlay */
+/* Image Responsive Function - Image Stacks On Text */
+.responsive {
+    float: left;
+    width: 50%;}
+
+@media only screen and (max-width: 700px) {
+    .responsive {width: 100%;}}
+
+/* Image-Overlay Container Characteristics */
 .container {
   position: relative;
-  width: auto;
-}
+  width: auto;}
 
-/* Characteristics of overlay */
+/* Overlay Characteristics */
 .overlay {
   position: absolute;
   top: 0;
@@ -74,15 +45,9 @@ div.gallery img {
   width: 100%;
   opacity: 0;
   transition: 0.5s;
-  background-color: white;
-}
+  background-color: white;}
 
-/* Changes opacity when mouse hovers over image */
-.container:hover .overlay {
-  opacity: 0.5;
-}
-
-/* Characteristics of overlay text*/
+/* Overlay Text Characteristics*/
 .text {
   color: black;
   position: absolute;
@@ -91,19 +56,37 @@ div.gallery img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%);}
+
+/* Image Hover - Opacty & Overlay */
+.container:hover .overlay {
+  opacity: 0.5;}
+  
+/* Description Characteristics */
+div.desc {
+  padding: 15px;
+  text-align: center;}
+
+/* Description Responsive Function - Descrptions Stack */
+.responsive {
+  padding: 0 10px;
+  float: left;
+  width: 50%;}
+
+@media only screen and (max-width: 800px) {
+  .responsive {width: 100%;}}
 
 </style>
 <body>
 
-<!-- Title of the web page -->
+<!-- Header Information -->
 <div class="header">
   <h1>MY PORTFOLIO</h1>
 	<p>Information.Information.Information.</p>
 </div>
+<!-- Header Information END -->
 
-<!-- Information for image one -->
+<!-- Image Information -->
 <div class="responsive">
   <div class="gallery img">
   	<div class="container">
@@ -114,20 +97,25 @@ div.gallery img {
     </div>
   </div>
 </div>
+<!-- Image Information END-->
 
-<!-- Inforamtion for image descriptions -->
-<div class="row">
-  <div class="column">
-    <h2>Column</h2>
+<!-- Decription One -->
+<div class="responsive">
+    <div class="desc">
+    <h2>Decription One</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-  </div>
-  
-  <div class="column">
-    <h2>Column</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-  </div>
-  
+    </div>
 </div>
+
+<!-- Decription Two -->
+<div class="responsive">
+    <div class="desc">
+    <h2>Description Two</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    </div>
+</div>
+
+<!-- Description Information END -->
 
 </body>
   
