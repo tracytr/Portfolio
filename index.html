@@ -6,21 +6,102 @@
   </head>
   
   <style>
-    body {font-family: candara}
-   
-    .header {
-      border-bottom: solid;
-      border-width: 1.5px;
-      padding: 45px;
-      text-align: center;
-      font-size: 50px;
-    }
-  </style>
- 
-  <body>
-    <div class="header">
-	    <h>PORTFOLIO</h>
-    </div>
-  </body>
+* {box-sizing: border-box;}
+	 
+/* Characteristics of the body */
+body {
+  margin: 0;
+  font-family: candara;
+}
+
+/* Style the header */
+.header {
+  padding: 35px;
+  text-align: center;
+  border-bottom: solid;
+  border-width: 1px;
+}
+
+/* Creates equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+/* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Changes opacity when mouse hovers over image*/
+div.gallery:hover {
+  opacity:0.5;
+}
+
+/* Characteristics of the images */
+div.gallery img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+/* Characteristics of the responsive function */
+.responsive {
+  float: left;
+  width: 50%;
+}
+
+/* Responsive layout - makes the images stack on top of each other instead of next to each other */
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Title of the web page -->
+<div class="header">
+  <h1>PORTFOLIO</h1>
+  <p>Information.Information.Information</p>
+</div>
+
+<!-- Information for image one -->
+<div class="responsive">
+  <div class="gallery img">
+    <a target="_blank">
+      <img src="img_0652.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<!-- Information for image two -->
+<div class="responsive">
+  <div class="gallery img">
+    <a target="_blank">
+      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<!-- Inforamtion for image descriptions -->
+<div class="row">
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+</div>
+
+</body>
   
 </html>
