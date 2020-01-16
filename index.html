@@ -18,8 +18,8 @@ body {font-family: candara;}
 div.gallery img {
     width: 100%;
     height: auto;
-    margin: 10px 0;
-    padding: 0 10px;}
+    margin: 20px 0;
+    padding: 0;}
 
 /* Image-Overlay Container Characteristics */
 .container {
@@ -64,9 +64,24 @@ div.desc {
   padding: 0 10px;
   float: left;
   width: 50%;}
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 793px) {
   .responsive {width: 100%;}}
+
+/* Footer Characteristics */
+.footer {
+	text-align: right;
+    border-top: solid;
+    border-width: 1px;
+    float: left;
+    width: 100%;}
+
+/* Footer Responsive Function */
+.resp {
+	padding: 0 10px;
+	float: right;
+    width: 50%;}
+@media only screen and (max-width: 793px) {
+	.resp {width: 100%;}}
 
 </style>
 <body>
@@ -91,6 +106,7 @@ div.desc {
 </div>
 <!-- Image Information END-->
 
+<!-- Description Information -->
 <!-- Decription One -->
 <div class="responsive">
     <div class="desc">
@@ -106,8 +122,17 @@ div.desc {
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
     </div>
 </div>
-
 <!-- Description Information END -->
+
+<!-- Footer Infomation -->
+<div class="resp">
+	<div class="footer">
+    	<p>Tracy Tram<br>
+        trtram4@gmail.com<br>
+        www.linkedin.com/in/tracymtram</p>
+    </div>
+</div>
+<!-- Footer Infomation END -->
 
 </body>
   
