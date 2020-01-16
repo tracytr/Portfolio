@@ -36,11 +36,6 @@ body {
   }
 }
 
-/* Changes opacity when mouse hovers over image*/
-div.gallery:hover {
-  opacity:0.5;
-}
-
 /* Characteristics of the images */
 div.gallery img {
   width: 100%;
@@ -61,21 +56,62 @@ div.gallery img {
     width: 100%;
   }
 }
+
+/* Container for image and overlay */
+.container {
+  position: relative;
+  width: auto;
+}
+
+/* Characteristics of overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: white;
+}
+
+/* Changes opacity when mouse hovers over image */
+.container:hover .overlay {
+  opacity: 0.5;
+}
+
+/* Characteristics of overlay text*/
+.text {
+  color: black;
+  position: absolute;
+  text-align:center;
+  font-size: 23px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 </style>
 <body>
 
 <!-- Title of the web page -->
 <div class="header">
   <h1>MY PORTFOLIO</h1>
-	<p><q>Let your smile change the world, but don't let the world change your smile.</q> — Connor Franta</p>
+	<p>Information.Information.Information.</p>
 </div>
 
 <!-- Information for image one -->
 <div class="responsive">
   <div class="gallery img">
-    <a target="_blank">
+  	<div class="container">
       <img src="https://user-images.githubusercontent.com/29666525/72492589-9c1c9480-37d2-11ea-8f69-0f2e5b0f78e0.png" width="600" height="400">
-    </a>
+      <div class="overlay">
+      	<div class="text"><q>Let your smile change the world, but don't let the world change your smile.</q><br>— Connor Franta</div>
+      </div>
+    </div>
   </div>
 </div>
 
