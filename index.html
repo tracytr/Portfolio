@@ -64,7 +64,7 @@ div.desc {
   padding: 0 10px;
   float: left;
   width: 50%;}
-@media only screen and (max-width: 793px) {
+@media only screen and (max-width: 872px) {
   .responsive {width: 100%;}}
 
 /* Footer Characteristics */
@@ -80,18 +80,42 @@ div.desc {
 	padding: 0 10px;
 	float: right;
     width: 50%;}
-@media only screen and (max-width: 793px) {
+@media only screen and (max-width: 872px) {
 	.resp {width: 100%;}}
 
 /* Link Characteristics */
-a:link {
-	color: black;
-	text-decoration: none;
-    target: _blank;}
-    
+.button {
+  color: black;
+  transition: 0.7s;}
+
+/* Span Characteristics */
+.button span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.7s;}
+
+/* Link Icon Characteristics */
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.7s;}
+
 /* Link Hover Characteristics */
-a:hover {
-	opacity: 75%;}
+.button:hover {
+	opacity: 50%;
+    transition: 0.7s;}
+
+/* Keeps Link Icon at a Distance from Text*/
+.button:hover span {
+  padding-right: 25px;}
+
+/* Displays Link Icon */
+.button:hover span:after {
+  opacity: 1;
+  right: 0;}
 
 </style>
 <body>
@@ -99,7 +123,7 @@ a:hover {
 <!-- Header Information -->
 <div class="header">
   <h1>MY PORTFOLIO</h1>
-  <p>Information.Information.Information.</p>
+  	<p>Information.Information.Information.</p>
 </div>
 <!-- Header Information END -->
 
@@ -117,19 +141,53 @@ a:hover {
 <!-- Image Information END-->
 
 <!-- Description Information -->
-<!-- Decription One -->
+<!-- About -->
 <div class="responsive">
     <div class="desc">
-    <h2>Decription One</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <h2>ABOUT</h2>
+    <p>Undergraduate at San Francisco State University<br>Bachelors of Science in Visual Communication Design</p>
     </div>
 </div>
 
-<!-- Decription Two -->
+<!-- Interests -->
 <div class="responsive">
     <div class="desc">
-    <h2>Description Two</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    	<h2>INTERESTS</h2>
+    		<ul>
+        		<li>Drawing — Traditional and 		
+                Digital Art.<br>
+                
+                </li>
+    			<li>Ceramics — Basic hand crafted 
+                pieces.<br>
+                </li>
+        		
+                <li>Web Design — Basic HMTL and CSS.
+                <br>
+                </li>
+        		
+                <li>Fashion — Dress up and styling.
+                <br>
+                </li>
+        		
+                <li>Music — A variety of genres, but 
+                mostly Kpop.<br>
+                </li>
+        		
+                <li>Dramas — Korean, Chinese and 
+                Thai dramas.
+                </li>
+    	</ul>
+    </div>
+</div>
+
+<!-- Resume -->
+<div class="responsive">
+    <div class="desc">
+    	<div class="button"><h2>
+    		<span href="https://docs.google.com/document/d/1o7DRk-t2xrrlC6IwBZ3kdwnJFiX9lf0iA5biRWLnijw/edit?usp=sharing">MY RESUME</span>
+        </h2></div>
+    <p>Above is a link to my resume for download.<br>Feel free to contact me with any questions or concerns!</p>
     </div>
 </div>
 <!-- Description Information END -->
@@ -137,8 +195,7 @@ a:hover {
 <!-- Footer Infomation -->
 <div class="resp">
     <div class="footer">
-	<p>Tracy Tram<br>trtram4@gmail.com<br>
-	<a href="https://www.linkedin.com/in/tracymtram">linkedin.com/in/tracymtram</a></p>
+	<p>Tracy M. Tram<br>2020</p>
     </div>
 </div>
 <!-- Footer Infomation END -->
