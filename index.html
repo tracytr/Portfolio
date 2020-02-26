@@ -1,187 +1,121 @@
 <!DOCTYPE html>
 <html>
-  
+<head>
 <style>
-* {box-sizing: border-box;}
-	 
-/* Body Characteristics */
-body {font-family: candara;}
+body {
+  margin: 0;
+  font-family: candara;
+}
 
-/* Header Characteristics */
-.header {
-    padding: 35px;
-    text-align: center;
-    border-bottom: solid;
-    border-width: 1px;}
-
-/* Image Characteristics */
-div.gallery img {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    padding: 0;}
-
-/* Image-Overlay Container Characteristics */
-.container {
-  position: relative;
-  width: auto;}
-
-/* Overlay Characteristics */
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+div.sidebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  position: fixed;
   height: 100%;
+  overflow: auto;
+  border-right: 1px solid;
+}
+
+div.gallery img {
   width: 100%;
-  opacity: 0;
-  transition: 0.5s;
-  background-color: white;}
+  height: auto;
+}
 
-/* Overlay Text Characteristics*/
-.text {
-  color: black;
-  position: absolute;
-  text-align:center;
-  font-size: 23px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);}
+/* The description under the images */
+div.description {
+  padding: 20px;
+  text-align: center;
+}
 
-/* Image Hover - Opacty & Overlay */
-.container:hover .overlay {
-  opacity: 0.5;}
-  
-/* Description Characteristics */
-div.desc {
-  padding: 15px;
-  text-align: left;}
+/* Makes sure all divisions are of equal sizing */
+* {box-sizing: border-box;}
 
-/* Responsive Function - Stack */
+/* Displays three images in a row */
 .responsive {
-  padding: 0 10px;
+  padding: 0 7px;
   float: left;
-  width: 50%;}
-@media only screen and (max-width: 872px) {
-  .responsive {width: 100%;}}
+  width: 26.6666666667%;
+}
 
-/* Footer Characteristics */
-.footer {
-	text-align: right;
-    border-top: solid;
-    border-width: 1px;
-    float: left;
-    width: 100%;}
+/* Displays only two images in a row */
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 50%;
+    margin: 6px 0;
+  }
+}
 
-/* Footer Responsive Function */
-.resp {
-	padding: 0 10px;
-	float: right;
-    width: 50%;}
-@media only screen and (max-width: 872px) {
-	.resp {width: 100%;}}
-
-/* Link Characteristics */
-.button {
-  color: black;
-  transition: 0.7s;}
-
-/* Span Characteristics */
-.button span {
-  cursor: pointer;
-  position: relative;
-  transition: 0.7s;}
-
-/* Link Icon Characteristics */
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -15px;
-  transition: 0.7s;}
-
-/* Link Hover Characteristics */
-.button:hover {
-	opacity: 50%;
-    transition: 0.7s;}
-
-/* Keeps Link Icon at a Distance from Text*/
-.button:hover span {
-  padding-right: 25px;}
-
-/* Displays Link Icon */
-.button:hover span:after {
-  opacity: 1;
-  right: 0;}
+/* Displays only one image in a row */
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
 
 </style>
+</head>
 <body>
 
-<!-- Header Information -->
-<div class="header">
-  <h1>MY PORTFOLIO</h1>
-  	<p>Information.Information.Information.</p>
+<div class="sidebar">
+  <h1 style="text-align:center;">My Portfolio</h1>
 </div>
-<!-- Header Information END -->
 
-<!-- Image Information -->
 <div class="responsive">
-  <div class="gallery img">
-  	<div class="container">
-      <img src="https://user-images.githubusercontent.com/29666525/72492589-9c1c9480-37d2-11ea-8f69-0f2e5b0f78e0.png" width="600" height="400">
-      <div class="overlay">
-      	<div class="text"><q>Resize window to see responsive effect!</q></div>
-      </div>
-    </div>
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="description">Add a description of the image here</div>
   </div>
 </div>
-<!-- Image Information END-->
 
-<!-- Description Information -->
-<!-- About -->
+
 <div class="responsive">
-    <div class="desc">
-    <h2>ABOUT</h2>
-    <p>Undergraduate at San Francisco State University<br>Bachelors of Science in Visual Communication Design</p>
-    </div>
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="description">Add a description of the image here</div>
+  </div>
 </div>
 
-<!-- Interests -->
 <div class="responsive">
-    <div class="desc">
-    	<h2>INTERESTS</h2>
-    	<ul>
-           <li>Drawing — Traditional and Digital Art.<br></li>
-    	   <li>Ceramics — Basic hand crafted pieces.<br></li>
-	   <li>Web Design — Basic HMTL and CSS.<br></li>
-	   <li>Creative Writing — Poetry, journaling, free writing.<br></li>
-	   <li>Music — A variety of genres, but mostly Kpop.<br></li>
-           <li>Dramas — Korean, Chinese and Thai dramas.</li>
-    	</ul>
-    </div>
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="description">Add a description of the image here</div>
+  </div>
 </div>
 
-<!-- Resume -->
 <div class="responsive">
-    <div class="desc">
-    	<div class="button"><h2>
-    		<span href="https://docs.google.com/document/d/1o7DRk-t2xrrlC6IwBZ3kdwnJFiX9lf0iA5biRWLnijw/edit?usp=sharing">MY RESUME</span>
-        </h2></div>
-    <p>Above is a link to my resume for download.<br>Feel free to contact me with any questions or concerns!</p>
-    </div>
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="description">Add a description of the image here</div>
+  </div>
 </div>
-<!-- Description Information END -->
 
-<!-- Footer Infomation -->
-<div class="resp">
-    <div class="footer">
-	<p>Tracy M. Tram<br>2020</p>
-    </div>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="description">Add a description of the image here</div>
+  </div>
 </div>
-<!-- Footer Infomation END -->
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="description">Add a description of the image here</div>
+  </div>
+</div>
 
 </body>
 </html>
