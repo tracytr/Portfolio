@@ -3,19 +3,18 @@
 <head>
 <style>
 body {
-  margin: 0;
-  font-family: candara;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding: 15px;
 }
 
-div.sidebar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 20%;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-  border-right: 1px solid;
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
 }
 
 div.gallery img {
@@ -23,23 +22,21 @@ div.gallery img {
   height: auto;
 }
 
-/* The description under the images */
-div.description {
-  padding: 20px;
+div.desc {
+  padding: 15px;
   text-align: center;
 }
 
-/* Makes sure all divisions are of equal sizing */
-* {box-sizing: border-box;}
-
-/* Displays three images in a row */
-.responsive {
-  padding: 0 7px;
-  float: left;
-  width: 26.6666666667%;
+* {
+  box-sizing: border-box;
 }
 
-/* Displays only two images in a row */
+.responsive {
+  padding: 5px 5px;
+  float: left;
+  width: 25%;
+}
+
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 50%;
@@ -47,27 +44,30 @@ div.description {
   }
 }
 
-/* Displays only one image in a row */
 @media only screen and (max-width: 500px) {
   .responsive {
     width: 100%;
   }
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 </style>
 </head>
 <body>
 
-<div class="sidebar">
-  <h1 style="text-align:center;">My Portfolio</h1>
-</div>
+<h1>PORTFOLIO</h1>
+<p>Add a description of the portfolio here</p>
 
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" href="img_5terre.jpg">
-      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+      <img src="https://user-images.githubusercontent.com/29666525/75596654-4f211480-5a46-11ea-95b5-69e9a4cc6b06.jpg" alt="Cinque Terre" width="600" height="400">
     </a>
-    <div class="description">Add a description of the image here</div>
+    <div class="desc">ABOUT</div>
   </div>
 </div>
 
@@ -75,46 +75,35 @@ div.description {
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" href="img_forest.jpg">
-      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+      <img src="https://user-images.githubusercontent.com/29666525/75596642-47617000-5a46-11ea-8d46-4a1a2114593e.jpg" alt="Forest" width="600" height="400">
     </a>
-    <div class="description">Add a description of the image here</div>
+    <div class="desc">WORK</div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" href="img_lights.jpg">
-      <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+      <img src="https://user-images.githubusercontent.com/29666525/75596647-4af4f700-5a46-11ea-9284-b90a450f17bc.jpg" alt="Northern Lights" width="600" height="400">
     </a>
-    <div class="description">Add a description of the image here</div>
+    <div class="desc">RESUME</div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" href="img_mountains.jpg">
-      <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+      <img src="https://user-images.githubusercontent.com/29666525/75596657-521c0500-5a46-11ea-9785-ddb48562e47d.jpg" alt="Mountains" width="600" height="400">
     </a>
-    <div class="description">Add a description of the image here</div>
+    <div class="desc">CONTACT</div>
   </div>
 </div>
 
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_5terre.jpg">
-      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-    </a>
-    <div class="description">Add a description of the image here</div>
-  </div>
-</div>
+<div class="clearfix"></div>
 
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="description">Add a description of the image here</div>
-  </div>
+<div>
+  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+  <p>Add information about the porfolio here</p>
 </div>
 
 </body>
