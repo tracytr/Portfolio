@@ -1,100 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  text-align: center;
-  padding: 20px 0px;
-}
-
-div.gallery {
-  border: 1px solid #ccc;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-  transition: 0.30s;
-  box-shadow: 5px 5px 3px #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-  font-size: 15px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 20px 5px;
-  float: left;
-  width: 25%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 50%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-</style>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+<style>
+
+/*Style the Header*/
+div.header {
+  font-family: cambria;
+  padding: 10px 0px 10px 35px;
+  text-align: center;
+}
+
+/*Style Heading One*/
+h1 {
+  font-size: 40px;
+}
+
+/*Style the Table*/
+table, th, td {
+  border: none;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+/*Style the Navigation Bar*/
+.nav {
+  list-style-type: none;
+  text-align: center;
+}
+
+/*Style the Links on the Naviation Bar*/
+.nav li {
+  display: inline-block;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  margin: 0px 15px 0px 15px;
+}
+
+/*Style the Response Effect of Hovering Over the Links*/
+.nav li:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+</style>
+
 <body>
 
-<h1 style="font-size:50px">PORTFOLIO</h1>
-<p style="font-size:15px">TRACY TRAM | 2020</p>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_5terre.jpg">
-      <img src="https://user-images.githubusercontent.com/29666525/75596654-4f211480-5a46-11ea-95b5-69e9a4cc6b06.jpg" alt="Cinque Terre" width="600" height="400">
-    </a>
-    <div class="desc">ABOUT</div>
-  </div>
+<div class="header">
+	<h1>Tracy Tram</h1>
+  <p>Add an inspirational quote here.</p>
 </div>
 
+<ul class="nav">
+  <table>
+	  <tr>
+      <th><i class="fas fa-user"></i></th>
+      <th><i class="fas fa-folder-open"></i></th>
+      <th><i class="fas fa-file"></i></th>
+      <th><i class="fas fa-envelope"></i></th>
+    </tr>
+    <tr>
+      <td><li><a herf="#"><b>ABOUT</b></a></li></td>
+    	<td><li><a herf="#"><b>PORFOLIO</b></a></li></td>
+    	<td><li><a herf="#"><b>RESUME</b></a></li></td>
+    	<td><li><a herf="#"><b>CONTACT</b></a></li></td>
+    </tr>
+  <table>
+</ul>
 
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-      <img src="https://user-images.githubusercontent.com/29666525/75596642-47617000-5a46-11ea-8d46-4a1a2114593e.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="desc">WORK</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_lights.jpg">
-      <img src="https://user-images.githubusercontent.com/29666525/75596647-4af4f700-5a46-11ea-9284-b90a450f17bc.jpg" alt="Northern Lights" width="600" height="400">
-    </a>
-    <div class="desc">RESUME</div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_mountains.jpg">
-      <img src="https://user-images.githubusercontent.com/29666525/75596657-521c0500-5a46-11ea-9785-ddb48562e47d.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">CONTACT</div>
-  </div>
-</div>
+<img src="https://user-images.githubusercontent.com/29666525/75725643-be407800-5c95-11ea-97f0-1b083f4445ee.jpg" style="width:100%;height:auto">
 
 </body>
 </html>
