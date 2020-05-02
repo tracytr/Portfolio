@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
 <style>
-	#bkg {
-		background-image: url("https://user-images.githubusercontent.com/29666525/80530883-8761a800-894e-11ea-891f-36e9d3d31da1.jpg");
-		background-repeat: no-repeat;
-		background-position: top;
-		background-attachment: scroll;
-	}
-</style>
+body {
+  margin: 0;
+  font-family: Quicksand;
+}
 
+.image {
+  background: url(https://user-images.githubusercontent.com/29666525/80848260-87201180-8bc7-11ea-86f7-8277f6dbebb4.jpg) no-repeat center; 
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.home {
+  text-align: center;
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.border {
+	border: 2px solid white;
+    padding: 0px 80px 0px 80px;
+}
+</style>
+</head>
 <body>
-	<div id="bkg">
-		<h1>Text</h1>
-	</div>
+
+<div class="image">
+  <div class="home">
+  	<div class="border">
+    	<p>TRACY TRAM</p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
